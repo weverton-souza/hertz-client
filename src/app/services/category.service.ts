@@ -7,16 +7,31 @@ import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
+
 export class CategoryService {
 
-  private baseUrl = 'http://localhost:8080/app/category';
+  private baseUrl = 'http://localhost:8080/app/categories';
   private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
 
   constructor( private http: HttpClient ) { }
 
-  getCategories(): Observable<Category[]> {
-    return this.http.get(this.baseUrl + '/list-all').pipe(
-      map(data => data as Category[])
-    );
+  save(category: Category): Observable<Category>  {
+    return this.http.post<Category>(this.baseUrl, category, { headers: this.httpHeaders });
+  }
+
+  update(category: Category): Observable<Category>  {
+    return this.http.put<Category>(this.baseUrl, category, { headers: this.httpHeaders });
+  }
+
+  findById(idCategory: string): Observable<Category> {
+    return this.http.get<Category>( this.baseUrl + '/' + idCategory);
+  }
+
+  findAll(): Observable<Category[]> {
+    return this.http.get(this.baseUrl).pipe( map(data => data as Category[]) );
+  }
+
+  delete(idCategory: number): Observable<Category>  {
+    return this.http.delete<Category>('${this.baseUrl}/${idCategory}', { headers: this.httpHeaders });
   }
 }

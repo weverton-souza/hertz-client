@@ -15,7 +15,17 @@ export class ListCategoryComponent implements OnInit {
   constructor(private router: Router, private service: CategoryService) { }
 
   ngOnInit() {
-    this.service.getCategories().subscribe(data => (this.categories = data));
+    this.service.findAll().subscribe(data => (this.categories = data));
+  }
+
+  update(category: Category): void {
+    localStorage.removeItem('id');
+    localStorage.setItem('id', category.id);
+    this.router.navigate(['edit-category']);
+  }
+
+  add(): void {
+    this.router.navigate(['add-category']);
   }
 
 }

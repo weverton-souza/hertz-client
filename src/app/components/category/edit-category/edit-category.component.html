@@ -1,3 +1,18 @@
-<p>
-  edit-category works!
-</p>
+<div class="col">
+    <h2 class="text-center">Editar Categoria</h2>
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+
+      <div class="form-group">
+        <label for="description">Descrição:</label>
+        <input formControlName="description" placeholder="Descrição" name="description" class="form-control" id="description" required>
+      </div>
+
+      <div class="form-group">
+        <label for="price">Preço:</label>
+        <input formControlName="price" placeholder="Preço" name="price" class="form-control" id="price" required>
+      </div>
+
+      <button class="btn btn-success md-btn">Salvar</button>
+      <button class="btn btn-primary ml-2 md-btn" routerLink="list-customer">Cancelar</button>
+    </form>
+  </div>

@@ -1,6 +1,6 @@
 <div class="col">
   <h2>Categorias</h2>
-  <button class="btn btn-primary md-btn mg-bottom-10">Adicionar</button>
+  <button class="btn btn-primary md-btn mg-bottom-10" (click)="add()">Adicionar</button>
   <table class="table table-striped">
     <thead>
       <tr class="d-flex">
@@ -14,12 +14,8 @@
         <td class="col-4">{{ category.description }}</td>
         <td class="col-4">{{ category.price }}</td>
         <td class="col-4 text-center">
-          <button class="btn btn-success md-btn">
-            Editar
-          </button>
-          <button class="btn btn-danger ml-2 md-btn">
-            Deletar
-          </button>
+          <button class="btn btn-success md-btn" (click)="update(category)">Editar</button>
+          <button class="btn btn-danger ml-2 md-btn">Deletar</button>
         </td>
       </tr>
     </tbody>
