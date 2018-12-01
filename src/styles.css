@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+
+* {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+.md-btn {
+  width:100px;
+  padding:5px;
+}
+
+.mg-bottom-10 {
+  margin-bottom: 10px;
+}
