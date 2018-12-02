@@ -1,0 +1,25 @@
+<div class="col">
+  <h2>Modelos</h2>
+  <button class="btn btn-primary md-btn mg-bottom-10" (click)="add()">Adicionar</button>
+  <table class="table table-striped">
+    <thead>
+      <tr class="d-flex">
+        <th class="col-3 align-content-center">Modelo</th>
+        <th class="col-3">Ano</th>
+        <th class="col-3">Descrição</th>
+        <th class="col-3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="d-flex" *ngFor="let model of models">
+        <td class="col-3">{{ model.name }}</td>
+        <td class="col-3">{{ model.modelYear }}</td>
+        <td class="col-3">{{ model.description }}</td>
+        <td class="col-3 text-center">
+          <button class="btn btn-success md-btn" (click)="update(model)">Editar</button>
+          <button class="btn btn-danger ml-2 md-btn" (click)="delete(model)">Deletar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

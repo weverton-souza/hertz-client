@@ -1,0 +1,18 @@
+<div class="col">
+  <h2 class="text-center">Adicionar fabricante</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="name">Nome:</label>
+      <input formControlName="name" placeholder="Nome" name="name" class="form-control" id="name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="description">Descrição:</label>
+        <input formControlName="description" placeholder="Descrição" name="description" class="form-control" id="description" required>
+    </div>
+
+    <button class="btn btn-success md-btn mg-bottom-10">Salvar</button>
+    <button class="btn btn-primary md-btn mg-bottom-10 ml-2" (click)="redirect()">Cancelar</button>
+  </form>
+</div>
