@@ -40,11 +40,15 @@ export class EditCategoryComponent implements OnInit {
       });
   }
 
+  redirect() {
+    this.router.navigate(['list-category']);
+  }
+
   onSubmit() {
     this.service.update(this.editForm.value)
       .pipe(first())
       .subscribe( data => {
-        this.router.navigate(['list-category']);
+        this.redirect();
         swal({
           position: 'top',
           type: 'success',

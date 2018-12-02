@@ -31,7 +31,7 @@ export class CategoryService {
     return this.http.get(this.baseUrl).pipe( map(data => data as Category[]) );
   }
 
-  delete(idCategory: number): Observable<Category>  {
-    return this.http.delete<Category>('${this.baseUrl}/${idCategory}', { headers: this.httpHeaders });
+  delete(idCategory: string): Observable<Category>  {
+    return this.http.delete<Category>(this.baseUrl + '/' + idCategory, { headers: this.httpHeaders });
   }
 }
