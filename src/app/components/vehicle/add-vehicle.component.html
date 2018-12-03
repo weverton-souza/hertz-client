@@ -1,0 +1,35 @@
+<div class="col">
+  <h2 class="text-center">Adicionar veículo</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+
+    <div class="dynamic-field form-select mg-bottom-10">
+        <select class="form-control" formControlName="category" [(ngModel)]="selectedCategory" required>
+            <option value="0" disabled selected hidden>Selecione uma categoria</option>
+            <option *ngFor="let cat of categories; let i = index;" [value]="i">
+              {{cat.name}}
+            </option>
+        </select>
+    </div>
+
+    <div class="dynamic-field form-select mg-bottom-10">
+        <select class="form-control" formControlName="model" [(ngModel)]="selectedModel" required>
+            <option value="0" disabled selected hidden>Selecione um modelo</option>
+            <option *ngFor="let model of models let i = index;" [value]="i">
+              {{model.name}}
+            </option>
+        </select>
+    </div>
+
+    <div class="dynamic-field form-select mg-bottom-10">
+        <select class="form-control" formControlName="make" [(ngModel)]="selectedManufacturer" required>
+            <option value="0" disabled selected hidden>Selecione um fabricante</option>
+            <option *ngFor="let make of manufacturers let i = index;" [value]="i">
+              {{make.name}}
+            </option>
+        </select>
+    </div>
+
+    <button class="btn btn-success md-btn mg-top-10">Salvar</button>
+    <button class="btn btn-primary md-btn ml-2 mg-top-10" (click)="redirect()">Cancelar</button>
+  </form>
+</div>

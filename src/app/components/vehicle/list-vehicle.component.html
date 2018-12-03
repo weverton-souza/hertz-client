@@ -1,0 +1,25 @@
+<div class="col">
+  <h2>Veículos</h2>
+  <button class="btn btn-primary md-btn mg-bottom-10" (click)="add()">Adicionar</button>
+  <table class="table table-striped">
+    <thead>
+      <tr class="d-flex">
+        <th class="col-3 align-content-center">Categoria</th>
+        <th class="col-3 ">Fabricante</th>
+        <th class="col-3">Modelo</th>
+        <th class="col-3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="d-flex" *ngFor="let vehicle of vehicles">
+        <td class="col-3">{{ vehicle.category.name }}</td>
+        <td class="col-3">{{ vehicle.make.name }}</td>
+        <td class="col-3">{{ vehicle.model.name }}</td>
+        <td class="col-3 text-center">
+          <button class="btn btn-success md-btn" (click)="update(vehicle)">Editar</button>
+          <button class="btn btn-danger ml-2 md-btn" (click)="delete(vehicle)">Deletar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,23 @@
+<div class="col">
+  <h2>Avarias</h2>
+  <button class="btn btn-primary md-btn mg-bottom-10" (click)="add()">Adicionar</button>
+  <table class="table table-striped">
+    <thead>
+      <tr class="d-flex">
+        <th class="col-4 align-content-center">Descrição</th>
+        <th class="col-4">Preço</th>
+        <th class="col-4"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="d-flex" *ngFor="let damage of damages">
+        <td class="col-4">{{ damage.description }}</td>
+        <td class="col-4">{{ damage.price }}</td>
+        <td class="col-4 text-center">
+          <button class="btn btn-success md-btn" (click)="update(damage)">Editar</button>
+          <button class="btn btn-danger ml-2 md-btn" (click)="delete(damage)">Deletar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
