@@ -4,17 +4,21 @@
   <table class="table table-striped">
     <thead>
       <tr class="d-flex">
-        <th class="col-3 align-content-center">Categoria</th>
-        <th class="col-3 ">Fabricante</th>
-        <th class="col-3">Modelo</th>
+        <th class="col-2">Nome</th>
+        <th class="col-1">Placa</th>
+        <th class="col-2">Categoria</th>
+        <th class="col-2 ">Fabricante</th>
+        <th class="col-2">Modelo</th>
         <th class="col-3"></th>
       </tr>
     </thead>
     <tbody>
       <tr class="d-flex" *ngFor="let vehicle of vehicles">
-        <td class="col-3">{{ vehicle.category.name }}</td>
-        <td class="col-3">{{ vehicle.make.name }}</td>
-        <td class="col-3">{{ vehicle.model.name }}</td>
+        <td class="col-2">{{ vehicle.name }}</td>
+        <td class="col-1">{{ vehicle.license }}</td>
+        <td class="col-2">{{ vehicle.category.name }}</td>
+        <td class="col-2">{{ vehicle.make.name }}</td>
+        <td class="col-2">{{ vehicle.model.name }}</td>
         <td class="col-3 text-center">
           <button class="btn btn-success md-btn" (click)="update(vehicle)">Editar</button>
           <button class="btn btn-danger ml-2 md-btn" (click)="delete(vehicle)">Deletar</button>

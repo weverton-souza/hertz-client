@@ -1,0 +1,49 @@
+<div class="col">
+  <h2 class="text-center">Adicionar aluguel</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+        <label for="name">Data:</label>
+        <input formControlName="name" placeholder="Nome" name="name" class="form-control" id="name" required>
+    </div>
+
+    <div class="dynamic-field form-select mg-bottom-10">
+        <select class="form-control" formControlName="vehicle" [(ngModel)]="selectedVehicle" required>
+            <option value="0" disabled selected hidden>Selecione um veículo</option>
+            <option *ngFor="let vehicle of vehicles let i = index;" [value]="i">
+              {{vehicle.name}} - {{vehicle.license}}
+            </option>
+        </select>
+    </div>
+
+    <div class="dynamic-field form-select mg-bottom-10">
+        <select class="form-control" formControlName="customer" [(ngModel)]="selectedCustomer" required>
+            <option value="0" disabled selected hidden>Selecione um cliente</option>
+            <option *ngFor="let customer of customers let i = index;" [value]="i">
+              {{customer.name}}
+            </option>
+        </select>
+    </div>
+
+    <div class="dynamic-field form-select mg-bottom-10">
+        <select class="form-control" formControlName="damage" [(ngModel)]="selectedDamage" required>
+            <option value="0" disabled selected hidden>Selecione um avaria</option>
+            <option *ngFor="let damage of damages let i = index;" [value]="i">
+              {{damage.description}}
+            </option>
+        </select>
+    </div>
+
+    <div class="dynamic-field form-select mg-bottom-10">
+        <select class="form-control" formControlName="make" [(ngModel)]="selectedTicket" required>
+            <option value="0" disabled selected hidden>Selecione uma multa</option>
+            <option *ngFor="let ticket of tickets let i = index;" [value]="i">
+              {{ticket.description}}
+            </option>
+        </select>
+    </div>
+
+    <button class="btn btn-success md-btn mg-bottom-10">Salvar</button>
+    <button class="btn btn-primary md-btn mg-bottom-10 ml-2" (click)="redirect()">Cancelar</button>
+  </form>
+</div>

@@ -23,7 +23,7 @@ export class ListVehicleComponent implements OnInit {
   delete(vehicle: Vehicle): void {
     swal({
       title: 'Atenção',
-      text: 'Realmente deseja excluir este cliente?',
+      text: 'Realmente deseja excluir este veículo?',
       type: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',

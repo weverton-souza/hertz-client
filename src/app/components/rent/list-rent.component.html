@@ -1,0 +1,28 @@
+<div class="col">
+  <h2>Alugueis</h2>
+  <button class="btn btn-primary md-btn mg-bottom-10" (click)="add()">Adicionar</button>
+  <table class="table table-striped">
+    <thead>
+      <tr class="d-flex">
+        <th class="col-2">Veículo</th>
+        <th class="col-2">Placa</th>
+        <th class="col-2">Avaria</th>
+        <th class="col-2">Multa</th>
+        <th class="col-3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="d-flex" *ngFor="let rent of rents">
+        <td class="col-2">{{ rent.vehicle }}</td>
+        <td class="col-2">{{ rent.customer }}</td>
+        <td class="col-2">{{ rent.vehicle }}</td>
+        <td class="col-2">{{ rent.damage }}</td>
+        <td class="col-2">{{ rent.traffictTickets }}</td>
+        <td class="col-3 text-center">
+          <button class="btn btn-success md-btn" (click)="update(rent)">Editar</button>
+          <button class="btn btn-danger ml-2 md-btn" (click)="delete(rent)">Deletar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -27,6 +27,14 @@ import { AddTraffictTicketComponent } from './components/traffictTicket/add-traf
 import { EditTraffictTicketComponent } from './components/traffictTicket/edit-traffictTicket.component';
 import { ListTraffictTicketComponent } from './components/traffictTicket/list-traffictTicket.component';
 
+import { AddEmployeeComponent } from './components/employee/add-employee.component';
+import { EditEmployeeComponent } from './components/employee/edit-employee.component';
+import { ListEmployeeComponent } from './components/employee/list-employee.component';
+
+import { AddRentComponent } from './components/rent/add-rent.component';
+import { EditRentComponent } from './components/rent/edit-rent.component';
+import { ListRentComponent } from './components/rent/list-rent.component';
+
 import { ShowHomeComponent } from './components/home/show-home.component';
 
 export const ROUTES: Routes = [
@@ -57,6 +65,14 @@ export const ROUTES: Routes = [
     { path: 'add-traffictTicket', component: AddTraffictTicketComponent },
     { path: 'edit-traffictTicket', component: EditTraffictTicketComponent },
     { path: 'list-traffictTicket', component: ListTraffictTicketComponent },
+
+    { path: 'add-employee', component: AddEmployeeComponent },
+    { path: 'edit-employee', component: EditEmployeeComponent },
+    { path: 'list-employee', component: ListEmployeeComponent },
+
+    { path: 'add-rent', component: AddRentComponent },
+    { path: 'edit-rent', component: EditRentComponent },
+    { path: 'list-rent', component: ListRentComponent },
 
     { path: 'home', component: ShowHomeComponent },
 

@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ManufacturerService } from '../../services/manufacturer.service';
+import { EmployeeService } from '../../services/employee.service';
 import swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-add-manufacturer',
-  templateUrl: 'add-manufacturer.component.html',
+  selector: 'app-add-employee',
+  templateUrl: 'add-employee.component.html',
   styles: []
 })
-export class AddManufacturerComponent implements OnInit {
+export class AddEmployeeComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder, private router: Router, private service: ManufacturerService) { }
+  constructor(private formBuilder: FormBuilder, private router: Router, private service: EmployeeService) { }
 
   addForm: FormGroup;
 
@@ -19,12 +19,12 @@ export class AddManufacturerComponent implements OnInit {
     this.addForm = this.formBuilder.group({
       id: [],
       name: ['', Validators.required],
-      description: ['', Validators.required]
+      registration: ['', Validators.required]
     });
   }
 
   redirect() {
-    this.router.navigate(['list-manufacturer']);
+    this.router.navigate(['list-employee']);
   }
 
   onSubmit() {
@@ -34,7 +34,7 @@ export class AddManufacturerComponent implements OnInit {
         swal({
           position: 'top',
           type: 'success',
-          title: 'Fabricante criado!',
+          title: 'Categoria criada!',
           showConfirmButton: false,
           timer: 1500
         });

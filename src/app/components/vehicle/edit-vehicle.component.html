@@ -2,6 +2,16 @@
     <h2 class="text-center">Editar veículo</h2>
     <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
 
+      <div class="form-group">
+          <label for="name">Nome:</label>
+          <input formControlName="name" placeholder="Nome" name="name" class="form-control" id="name" required>
+      </div>
+
+      <div class="form-group">
+          <label for="license">Placa do veículo:</label>
+          <input formControlName="license" placeholder="Placa do veículo" name="license" class="form-control" id="license" required>
+      </div>
+
       <div class="dynamic-field form-select mg-bottom-10">
           <select class="form-control" formControlName="category" [(ngModel)]="selectedCategory">
               <option *ngFor="let cat of categories; let i = index;" [value]="i">

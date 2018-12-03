@@ -2,6 +2,16 @@
   <h2 class="text-center">Adicionar veículo</h2>
   <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
 
+    <div class="form-group">
+        <label for="name">Nome:</label>
+        <input formControlName="name" placeholder="Nome" name="name" class="form-control" id="name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="license">Placa do veículo:</label>
+        <input formControlName="license" placeholder="Placa do veículo" name="license" class="form-control" id="license" required>
+    </div>
+
     <div class="dynamic-field form-select mg-bottom-10">
         <select class="form-control" formControlName="category" [(ngModel)]="selectedCategory" required>
             <option value="0" disabled selected hidden>Selecione uma categoria</option>

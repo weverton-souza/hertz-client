@@ -34,7 +34,7 @@ export class AddTraffictTicketComponent implements OnInit {
         swal({
           position: 'top',
           type: 'success',
-          title: 'Multa criado!',
+          title: 'Multa criada!',
           showConfirmButton: false,
           timer: 1500
         });

@@ -41,6 +41,8 @@ export class AddVehicleComponent implements OnInit {
 
     this.addForm = this.formBuilder.group({
       id: [],
+      name: ['', Validators.required],
+      license: ['', Validators.required],
       category: ['', Validators.required],
       make: ['', Validators.required],
       model: ['', Validators.required]

@@ -8,6 +8,6 @@ export class Rent {
   date: string;
   vehicle: Array<Vehicle> = [];
   customer: Customer;
-  demage: Array<Damage> = [];
+  damage: Array<Damage> = [];
   traffictTickets: Array<TraffictTicket> = [];
 }

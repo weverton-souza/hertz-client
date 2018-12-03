@@ -51,6 +51,8 @@ export class EditVehicleComponent implements OnInit {
 
     this.editForm = this.formBuilder.group({
       id: [],
+      name: ['', Validators.required],
+      license: ['', Validators.required],
       category: ['', Validators.required],
       make: ['', Validators.required],
       model: ['', Validators.required]

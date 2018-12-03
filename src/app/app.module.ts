@@ -32,6 +32,14 @@ import { AddTraffictTicketComponent } from './components/traffictTicket/add-traf
 import { EditTraffictTicketComponent } from './components/traffictTicket/edit-traffictTicket.component';
 import { ListTraffictTicketComponent } from './components/traffictTicket/list-traffictTicket.component';
 
+import { AddEmployeeComponent } from './components/employee/add-employee.component';
+import { EditEmployeeComponent } from './components/employee/edit-employee.component';
+import { ListEmployeeComponent } from './components/employee/list-employee.component';
+
+import { AddRentComponent } from './components/rent/add-rent.component';
+import { EditRentComponent } from './components/rent/edit-rent.component';
+import { ListRentComponent } from './components/rent/list-rent.component';
+
 import { ShowHomeComponent } from './components/home/show-home.component';
 
 import { ROUTES } from './app.routes';
@@ -69,6 +77,14 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     AddTraffictTicketComponent,
     EditTraffictTicketComponent,
     ListTraffictTicketComponent,
+
+    AddEmployeeComponent,
+    EditEmployeeComponent,
+    ListEmployeeComponent,
+
+    AddRentComponent,
+    EditRentComponent,
+    ListRentComponent,
 
     ShowHomeComponent
   ],
