@@ -20,11 +20,19 @@ import { AddManufacturerComponent } from './components/manufacturer/add-manufact
 import { ListManufacturerComponent } from './components/manufacturer/list-manufacturer.component';
 import { EditManufacturerComponent } from './components/manufacturer/edit-manufacturer.component';
 
+import { AddVehicleComponent } from './components/vehicle/add-vehicle.component';
+import { EditVehicleComponent } from './components/vehicle/edit-vehicle.component';
+import { ListVehicleComponent } from './components/vehicle/list-vehicle.component';
+
+import { AddDamageComponent } from './components/damage/add-damage.component';
+import { EditDamageComponent } from './components/damage/edit-damage.component';
+import { ListDamageComponent } from './components/damage/list-damage.component';
+
 
 import { ROUTES } from './app.routes';
 import { RouterModule } from '@angular/router';
 
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,21 +40,33 @@ import { ReactiveFormsModule } from '@angular/forms';
     ListCategoryComponent,
     EditCategoryComponent,
     AddCategoryComponent,
+
     AddModelComponent,
     ListModelComponent,
     EditModelComponent,
+
     AddCustomerComponent,
     ListCustomerComponent,
     EditCustomerComponent,
+
     AddManufacturerComponent,
     ListManufacturerComponent,
-    EditManufacturerComponent
+    EditManufacturerComponent,
+
+    AddVehicleComponent,
+    ListVehicleComponent,
+    EditVehicleComponent,
+
+    AddDamageComponent,
+    ListDamageComponent,
+    EditDamageComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot( ROUTES, { useHash: true } ),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -15,6 +15,14 @@ import { AddManufacturerComponent } from './components/manufacturer/add-manufact
 import { EditManufacturerComponent } from './components/manufacturer/edit-manufacturer.component';
 import { ListManufacturerComponent } from './components/manufacturer/list-manufacturer.component';
 
+import { AddVehicleComponent } from './components/vehicle/add-vehicle.component';
+import { EditVehicleComponent } from './components/vehicle/edit-vehicle.component';
+import { ListVehicleComponent } from './components/vehicle/list-vehicle.component';
+
+import { AddDamageComponent } from './components/damage/add-damage.component';
+import { EditDamageComponent } from './components/damage/edit-damage.component';
+import { ListDamageComponent } from './components/damage/list-damage.component';
+
 export const ROUTES: Routes = [
     { path: 'add-category', component: AddCategoryComponent },
     { path: 'edit-category', component: EditCategoryComponent },
@@ -30,7 +38,16 @@ export const ROUTES: Routes = [
 
     { path: 'add-manufacturer', component: AddManufacturerComponent },
     { path: 'edit-manufacturer', component: EditManufacturerComponent },
-    { path: 'list-manufacturer', component: ListManufacturerComponent }
-    // { path: '', pathMatch: 'full', redirectTo: 'list-category' },
-    // { path: '**', pathMatch: 'full', redirectTo: 'list-category' }
+    { path: 'list-manufacturer', component: ListManufacturerComponent },
+
+    { path: 'add-vehicle', component: AddVehicleComponent },
+    { path: 'edit-vehicle', component: EditVehicleComponent },
+    { path: 'list-vehicle', component: ListVehicleComponent },
+
+    { path: 'add-damage', component: AddDamageComponent },
+    { path: 'edit-damage', component: EditDamageComponent },
+    { path: 'list-damage', component: ListDamageComponent },
+
+    { path: '', pathMatch: 'full', redirectTo: 'list-damage' },
+    { path: '**', pathMatch: 'full', redirectTo: 'list-damage' }
 ];
