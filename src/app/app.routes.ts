@@ -27,6 +27,8 @@ import { AddTraffictTicketComponent } from './components/traffictTicket/add-traf
 import { EditTraffictTicketComponent } from './components/traffictTicket/edit-traffictTicket.component';
 import { ListTraffictTicketComponent } from './components/traffictTicket/list-traffictTicket.component';
 
+import { ShowHomeComponent } from './components/home/show-home.component';
+
 export const ROUTES: Routes = [
     { path: 'add-category', component: AddCategoryComponent },
     { path: 'edit-category', component: EditCategoryComponent },
@@ -56,6 +58,8 @@ export const ROUTES: Routes = [
     { path: 'edit-traffictTicket', component: EditTraffictTicketComponent },
     { path: 'list-traffictTicket', component: ListTraffictTicketComponent },
 
-    { path: '', pathMatch: 'full', redirectTo: 'list-damage' },
-    { path: '**', pathMatch: 'full', redirectTo: 'list-damage' }
+    { path: 'home', component: ShowHomeComponent },
+
+    { path: '', pathMatch: 'full', redirectTo: 'home' },
+    { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];

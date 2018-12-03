@@ -4,6 +4,10 @@
   font-family: 'Rubik', sans-serif !important;
 }
 
+.font-size-17 {
+  font-size: 17px;
+}
+
 .md-btn {
   width:100px;
   padding:5px;

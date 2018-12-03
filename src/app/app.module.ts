@@ -32,6 +32,7 @@ import { AddTraffictTicketComponent } from './components/traffictTicket/add-traf
 import { EditTraffictTicketComponent } from './components/traffictTicket/edit-traffictTicket.component';
 import { ListTraffictTicketComponent } from './components/traffictTicket/list-traffictTicket.component';
 
+import { ShowHomeComponent } from './components/home/show-home.component';
 
 import { ROUTES } from './app.routes';
 import { RouterModule } from '@angular/router';
@@ -67,7 +68,9 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
     AddTraffictTicketComponent,
     EditTraffictTicketComponent,
-    ListTraffictTicketComponent
+    ListTraffictTicketComponent,
+
+    ShowHomeComponent
   ],
   imports: [
     BrowserModule,
