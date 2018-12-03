@@ -28,6 +28,10 @@ import { AddDamageComponent } from './components/damage/add-damage.component';
 import { EditDamageComponent } from './components/damage/edit-damage.component';
 import { ListDamageComponent } from './components/damage/list-damage.component';
 
+import { AddTraffictTicketComponent } from './components/traffictTicket/add-traffictTicket.component';
+import { EditTraffictTicketComponent } from './components/traffictTicket/edit-traffictTicket.component';
+import { ListTraffictTicketComponent } from './components/traffictTicket/list-traffictTicket.component';
+
 
 import { ROUTES } from './app.routes';
 import { RouterModule } from '@angular/router';
@@ -59,7 +63,11 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
     AddDamageComponent,
     ListDamageComponent,
-    EditDamageComponent
+    EditDamageComponent,
+
+    AddTraffictTicketComponent,
+    EditTraffictTicketComponent,
+    ListTraffictTicketComponent
   ],
   imports: [
     BrowserModule,

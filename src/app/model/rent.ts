@@ -1,7 +1,7 @@
 import { Customer } from './customer';
 import { Vehicle } from './vehicle';
 import { Damage } from './damage';
-import { TrafficTicket } from './trafficTicket';
+import { TraffictTicket } from './traffictTicket';
 
 export class Rent {
   id: string;
@@ -9,5 +9,5 @@ export class Rent {
   vehicle: Array<Vehicle> = [];
   customer: Customer;
   demage: Array<Damage> = [];
-  trafficTickets: Array<TrafficTicket> = [];
+  traffictTickets: Array<TraffictTicket> = [];
 }

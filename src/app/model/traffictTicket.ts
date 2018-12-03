@@ -1,4 +1,4 @@
-export class TrafficTicket {
+export class TraffictTicket {
   id: string;
   description: string;
   price: number;

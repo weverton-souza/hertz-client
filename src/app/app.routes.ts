@@ -23,6 +23,10 @@ import { AddDamageComponent } from './components/damage/add-damage.component';
 import { EditDamageComponent } from './components/damage/edit-damage.component';
 import { ListDamageComponent } from './components/damage/list-damage.component';
 
+import { AddTraffictTicketComponent } from './components/traffictTicket/add-traffictTicket.component';
+import { EditTraffictTicketComponent } from './components/traffictTicket/edit-traffictTicket.component';
+import { ListTraffictTicketComponent } from './components/traffictTicket/list-traffictTicket.component';
+
 export const ROUTES: Routes = [
     { path: 'add-category', component: AddCategoryComponent },
     { path: 'edit-category', component: EditCategoryComponent },
@@ -47,6 +51,10 @@ export const ROUTES: Routes = [
     { path: 'add-damage', component: AddDamageComponent },
     { path: 'edit-damage', component: EditDamageComponent },
     { path: 'list-damage', component: ListDamageComponent },
+
+    { path: 'add-traffictTicket', component: AddTraffictTicketComponent },
+    { path: 'edit-traffictTicket', component: EditTraffictTicketComponent },
+    { path: 'list-traffictTicket', component: ListTraffictTicketComponent },
 
     { path: '', pathMatch: 'full', redirectTo: 'list-damage' },
     { path: '**', pathMatch: 'full', redirectTo: 'list-damage' }
